@@ -1,0 +1,4 @@
+
+require("../css/style.scss");
+console.log("hello,world!")
+console.log("123");

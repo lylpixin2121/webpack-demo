@@ -1,0 +1,33 @@
+{
+  "name": "webpack-demo",
+  "version": "1.0.0",
+  "description": "a success webpack demo",
+  "main": "webpack.config.js",
+  "dependencies": {},
+  "devDependencies": {
+    "css-loader": "^0.23.1",
+    "file-loader": "^0.9.0",
+    "node-sass": "^3.8.0",
+    "sass-loader": "^4.0.0",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.1",
+    "html-webpack-plugin" : "^2.22.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lylpixin2121/webpack-demo.git"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "liyanlong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lylpixin2121/webpack-demo/issues"
+  },
+  "homepage": "https://github.com/lylpixin2121/webpack-demo#readme"
+}
