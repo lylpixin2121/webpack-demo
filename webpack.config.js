@@ -5,7 +5,7 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var time = new Date().getTime();
 module.exports = {
 	entry : {
-	    index1 : ["./src/js/index.js"]
+	    index : ["./src/js/index.js"]
 	},
 	output : {
 		path : path.resolve(__dirname,"./dist/static/"),
@@ -16,12 +16,13 @@ module.exports = {
 		loaders :[
 			{test : /\.css$/ , loader : ExtractTextPlugin.extract("style",["css"])},
 			{test : /\.scss$/ , loader : ExtractTextPlugin.extract("style",["css","sass"])},
-			{test : /\.(jpg|png)$/ , loader : "url-loader?limit = 8192"}
+			{test : /\.(jpg|png)$/ , loader : "url-loader?limit = 8192"},
+			{test: /\.(png|jpeg|gif)$/,loader: 'file-loader?name=./images/[name].[ext]'}
 		]
 	},
 	plugins: [
 	    new HtmlWebpackPlugin({
-	    	filename: '../index.html', // 留意这里，这里的路径是相对来path配置的
+	    	filename: './index.html', // 留意这里，这里的路径是相对来path配置的
 	    	template: './src/tpl/demo.html',
 	    	inject: true,
 	    	// minify : {

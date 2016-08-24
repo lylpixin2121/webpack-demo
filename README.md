@@ -21,3 +21,5 @@
 
 
 通过webpack.dev.config.js来搭建webpack的开发环境 去除编译环节 减少编译负担 增加开发效率
+
+使用file-loader来处理文件中的image

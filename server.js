@@ -8,8 +8,11 @@ var path = require("path")
 //配置 hot: true
 for(var key in config.entry){
 	var entry = config.entry[key];
-	entry.unshift('webpack-dev-server/client?http://192.168.50.198:9090/',"webpack/hot/dev-server");
+	entry.unshift('webpack-dev-server/client?http://192.168.50.198:8080/',"webpack/hot/dev-server");
 }
+
+
+
 
 config.plugins.push(new webpack.HotModuleReplacementPlugin())
 
@@ -17,12 +20,14 @@ var compile = webpack(config);
 
 
 var server = new webpackDevServer(compile,{
-	hot : true,
-	// contentBase: "/www",
+	// hot : true,
+	contentBase: "./",
 	stats : {
 		colors : true,
 		chunks : false
 	}
 })
 
-server.listen(9090,"192.168.50.198",function(){})
+server.listen("8080","192.168.50.198",function(){})
+
+// webpack-dev-server --config ./webpack.dev.config.js --content-base ./ --inline --progress  --host 192.168.50.198

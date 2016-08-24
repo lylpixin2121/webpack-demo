@@ -16,6 +16,8 @@ PS:"/foo/bar"其中的以/开头的一定是顶级文件夹 相当于硬盘的�
 
 - 2、html-webpack-plugin 是为了生成和注入新版html代码的 自动分配新的chunkhash
 
+- 3、使用webpack-dev-server的话 要小心path的一些路径问题 否则会导致无法显示正确的页面 只能显示目录页的问题（坑了我好久。。。）
+
 
 
 

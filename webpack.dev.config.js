@@ -20,7 +20,8 @@ module.exports = {
   },
   plugins: [
       new HtmlWebpackPlugin({
-        filename: '../index.html', // 留意这里，这里的路径是相对来path配置的
+        chunks: ['index'],
+        filename: './index.html', // 留意这里，这里的路径是相对来path配置的
         template: './src/tpl/demo.html',
         inject: true,
         // minify : {
