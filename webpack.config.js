@@ -19,7 +19,11 @@ module.exports = {
 			{test : /\.scss$/ , loader : ExtractTextPlugin.extract("style",["css","sass"])},
 			{test: /\.(htm|html)$/,loader: 'html-withimg-loader'},
 			{test : /\.(jpg|png)$/ , loader : "url-loader?limit=8192"},
-			{test: /\.(png|jpeg|gif)$/,loader: 'file-loader?name=./images/[name]-[sha512:hash:base64:7].[ext]'}
+			// {test: /\.(png|jpeg|gif)$/,loader: 'file-loader?name=./images/[name]-[sha512:hash:base64:7].[ext]'},
+			
+			
+			
+			
 		]
 	},
 	plugins: [
