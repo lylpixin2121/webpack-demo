@@ -1,11 +1,18 @@
 # webpack-demo
 
-相比于gulp，
+相比于gulp，优点：
 
 - 1、webpack在构建具备版本管理能力的项目方面，更优秀一些，天生自带的chunkhash 是其优势
 - 2、结合万物皆模块的思想，在资源打包这块做的更彻底和完美
 - 3、webpack的模块化 可以使我们很方便的使用commonJS规范来组织代码 写代码更带感
+- 4、扩展性强，插件机制完善，特别是支持 React 热插拔的功能让人眼前一亮。
+- 5、可以通过配置，打包成多个文件。有效利用浏览器的缓存功能提升性能。
+- 6、支持模块加载器和插件机制，可对模块灵活定制。特别是我最爱的babel-loader，有效支持ES6。
+- 7、内置有source map，即使打包在一起依旧方便调试。
 
+缺点：
+
+- 1、webpack在管理模块，处理众多资源中表现出众，但唯独在处理html上比较困难，不能识别html中img标签src引入的图片，因此经常会导致图片读取错误等问题，html-webpack-plugin这种插件辅助处理html非常好，但却仍然未解决html代码中的图片问题，这个问题可以采用html-withimg-loader来处理
 
 
 
@@ -22,4 +29,4 @@
 
 通过webpack.dev.config.js来搭建webpack的开发环境 去除编译环节 减少编译负担 增加开发效率
 
-使用file-loader来处理文件中的image
+使用html-withimg-loader来处理文件中的image,不过目前还有问题待解决
