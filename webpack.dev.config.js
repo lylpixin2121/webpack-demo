@@ -15,7 +15,8 @@ module.exports = {
     loaders :[
       {test : /\.css$/ , loader : "style!css"},
       {test : /\.scss$/ , loader : "style!css!sass"},
-      {test : /\.(jpg|png)$/ , loader : "url-loader?limit = 8192"}
+      {test : /\.(jpg|png)$/ , loader : "url-loader?limit=8192"},
+      {test: /\.(png|jpeg|gif)$/,loader: 'file-loader?name=./images/[name].[ext]'}
     ]
   },
   plugins: [
