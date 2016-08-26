@@ -1,6 +1,7 @@
 var path = require("path");
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var WebpackMd5Hash = require('webpack-md5-hash');
 
 
 var time = new Date().getTime();
@@ -11,7 +12,8 @@ module.exports = {
 	output : {
 		path : path.resolve(__dirname,"./dist/static/"),
 		publicPath: '', //publicPath是定义文件被打包后的url前缀的
-		filename : "[name].[chunkhash].js"
+		filename : "[name].[chunkhash:8].js",
+		chunkFilename: "[chunkhash].[id].chunk.js"
 	},
 	module : {
 		loaders :[
@@ -32,6 +34,7 @@ module.exports = {
 	    	// 	collapseWhitespace : true // 压缩所有html的空格
 	    	// }
 	    }),
-	    new ExtractTextPlugin("[name].[chunkhash].css")
+	    new ExtractTextPlugin("[name].[contenthash:8].css"),
+	    new WebpackMd5Hash()
 	]
 }
