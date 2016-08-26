@@ -30,3 +30,7 @@
 通过webpack.dev.config.js来搭建webpack的开发环境 去除编译环节 减少编译负担 增加开发效率
 
 使用html-withimg-loader来处理文件中的image,**切记不要把file-loader和url-loader同时使用**,url-loader本来就是对file-loader的更高级的封装 所以全有的功能 可以在url-loader上使用
+
+
+## webpack-md5-hash的使用
+我们知道webpack主要处理的是js 一般如果保持chunkhash一致的情况下 只要任意一个修改了 都会导致对应的css和js同时变更；哪怕是使用了extract-text-webpack-plugin,因为webpack是以整个js作为编译文件入口，只要你里面使用了诸如``require("xxx.css")``的操作 就一定会被webpack计算在内，同时更新，那这样就不利于缓存;所以我们可以采用css使用contenthash来处理，js使用webpack-md5-hash这样两个的修改就互不影响了
