@@ -18,12 +18,9 @@ module.exports = {
 			{test : /\.css$/ , loader : ExtractTextPlugin.extract("style",["css"])},
 			{test : /\.scss$/ , loader : ExtractTextPlugin.extract("style",["css","sass"])},
 			{test: /\.(htm|html)$/,loader: 'html-withimg-loader'},
-			{test : /\.(jpg|png)$/ , loader : "url-loader?limit=8192"},
+			{test : /\.(jpg|png)$/ , loader : "url-loader?limit=8192&name=./images/[name]_[sha512:hash:base64:7].[ext]"}
 			// {test: /\.(png|jpeg|gif)$/,loader: 'file-loader?name=./images/[name]-[sha512:hash:base64:7].[ext]'},
-			
-			
-			
-			
+
 		]
 	},
 	plugins: [
