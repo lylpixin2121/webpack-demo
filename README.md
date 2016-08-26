@@ -29,4 +29,4 @@
 
 通过webpack.dev.config.js来搭建webpack的开发环境 去除编译环节 减少编译负担 增加开发效率
 
-使用html-withimg-loader来处理文件中的image,不过目前还有问题待解决(貌似删除掉file-loader配置就好了，这块还要继续看怎么弄~)
+使用html-withimg-loader来处理文件中的image,**切记不要把file-loader和url-loader同时使用**,url-loader本来就是对file-loader的更高级的封装 所以全有的功能 可以在url-loader上使用
