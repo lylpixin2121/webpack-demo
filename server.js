@@ -28,6 +28,8 @@ var server = new webpackDevServer(compile,{
 	}
 })
 
-server.listen("8080","192.168.50.198",function(){})
+server.listen("8080","192.168.50.198",function(){
+	console.log("已经在8080端口监听啦")
+})
 
 // webpack-dev-server --config ./webpack.dev.config.js --content-base ./ --inline --progress  --host 192.168.50.198
