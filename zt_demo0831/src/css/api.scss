@@ -1,0 +1,23 @@
+#api .swiper-slide {
+    color: #fff;
+    text-align: center;
+    font-size: 50px;
+    padding-top: 50px;
+    box-sizing: border-box;
+}
+
+
+#api .swiper-slide{
+	&:nth-child(1){
+		background:#4390EE;
+	}
+	&:nth-child(2){
+		background:#CA4040;
+	}
+	&:nth-child(3){
+		background:#FF8604;
+	}
+	&:nth-child(4){
+		background:#6d4419;
+	}
+}
